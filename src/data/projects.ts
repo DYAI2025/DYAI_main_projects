@@ -164,8 +164,70 @@ export const projects: Project[] = [
     }
   },
   {
-    id: "whatsorga",
+    id: "media-intelligence-extension",
     number: "04",
+    title: "Media Intelligence Extension",
+    category: "Browser Extension · Media Intelligence · Source Work",
+    status: "Code Phase / Chrome Extension",
+    claim: "Eine Chrome Extension, die Videos in strukturierte Arbeitsnotizen, Links und sammelbare Wissensbausteine verwandelt.",
+    description: "Die Media Intelligence Extension ist ein Arbeitstool fuer schnelles Online-Arbeiten mit videobasierten Quellen. Sie fasst YouTube-Videos zusammen, extrahiert die wichtigsten Informationen und stellt relevante Links, Tools, Ressourcen und Entscheidungsmarker heraus. Statt Videos passiv zu konsumieren, verwandelt die Extension sie in strukturierte, speicherbare Outputs: Bullet Points, Tool-Listen, Build-Packs, Decision-Packs, Coach Notes oder Knowledge Notes. Alle wichtigen Links sind klickbar, sammelbar und koennen in einer persoenlichen Library in gesonderten Ordnern gespeichert werden. Technisch ist das System als Chrome Extension mit Side Panel gebaut und perspektivisch nicht nur auf YouTube begrenzt, sondern auch fuer TikTok, Instagram und Facebook vorbereitet.",
+    howItWorks: [
+      "Der Nutzer oeffnet ein Video oder Short-Form-Media im Browser.",
+      "Die Chrome Extension erkennt die Plattform und oeffnet ein Side Panel.",
+      "Der Nutzer klickt aktiv auf Extract. Es findet keine automatische Extraktion ohne Nutzeraktion statt.",
+      "Bei YouTube wird die verfuegbare Transcript- oder Textbasis extrahiert.",
+      "Bei TikTok, Instagram und Facebook kann Audio ueber ein Offscreen Document erfasst und verarbeitet werden.",
+      "Der Server verarbeitet die Daten mit einem AI-Provider wie Gemini Flash.",
+      "Das Ergebnis wird als strukturierter Output zurueckgegeben: Zusammenfassung, wichtige Punkte, Links, Tools, Ressourcen oder Entscheidungslogik.",
+      "Der Nutzer kann relevante Links und Informationspakete in einer persoenlichen Library speichern.",
+      "Gespeicherte Inhalte koennen in Ordnern bzw. Collections organisiert werden."
+    ],
+    forWhom: [
+      "Menschen, die viel mit YouTube-Videos, Tutorials, Talks, Produktdemos oder Online-Recherche arbeiten.",
+      "Entwickler, Founder, Researcher, Creator und Operator, die schnell aus Videoquellen verwertbare Informationen gewinnen wollen.",
+      "Nutzer, die Links, Tools und Ressourcen nicht mehr manuell aus Videos heraussuchen moechten.",
+      "Teams, die Online-Quellen in strukturierte Wissenssammlungen ueberfuehren wollen.",
+      "AI-native Worker, die Videoquellen als Teil ihres Research- und Entscheidungsworkflows nutzen."
+    ],
+    capabilities: [
+      "Chrome Extension auf Manifest V3",
+      "Side Panel UI",
+      "YouTube-Transcript-Extraction",
+      "Button-triggered Extraction",
+      "Audio Capture fuer TikTok, Instagram und Facebook",
+      "Video Session Management",
+      "strukturierte AI-Zusammenfassungen",
+      "Outcome Modes wie Knowledge, Build-Pack, Decision-Pack, Coach Notes, Tools und Stack",
+      "klickbare Link- und Ressourcenextraktion",
+      "persoenliche Library",
+      "Ordner bzw. Collections fuer gespeicherte Informationen",
+      "Supabase Auth und Persistenz",
+      "Node/Express Backend",
+      "Gemini Flash Extraction",
+      "Plan Gating und Rate Limiting",
+      "Stripe Upgrade Flow",
+      "Dark/Light Theme Toggle"
+    ],
+    aiLayer: [
+      "Die Extension ist kein generischer Summarizer, sondern ein Precision-Extraction-Tool.",
+      "Die AI-Schicht extrahiert nur High-Signal-Inhalte: Tipps, Techniken, Tools, Ressourcen, Links, Entscheidungsregeln und konkrete Handlungspunkte.",
+      "Der AI-Output ist modusabhaengig: Knowledge Notes, Build-Packs, Decision-Packs, Coach Notes, Tool-Listen oder Tech-Stack-Extraktion.",
+      "Secrets bleiben ausserhalb der Extension. AI- und Transcription-Routen laufen ueber den First-Party-Server.",
+      "Serverseitige Prompts erzwingen kurze, bulletbasierte, handlungsnahe Outputs statt langer Fliesstext-Zusammenfassungen."
+    ],
+    links: [
+      { label: "GitHub Repository", url: "https://github.com/VincBerlin/Extension-for-youtube-Instagram-Facebook-and-TikTok.git", type: "repo" }
+    ],
+    tags: ["Chrome Extension", "YouTube", "Media Intelligence", "Link Extraction", "Research Tool", "Supabase", "Gemini", "Side Panel"],
+    thumbnail: {
+      src: "https://picsum.photos/seed/media-intelligence-extension/800/450?blur=4",
+      alt: "Media Intelligence Extension als Browser-Side-Panel, das ein Video in Notizen, Links und sammelbare Wissensbausteine verwandelt.",
+      generationPrompt: "Editorial project thumbnail for a Chrome media intelligence extension: browser window with a video frame on the left, a sharp side panel on the right extracting bullet notes, clickable resource links, folder chips and saved knowledge cards. Visualize YouTube-style video research without copying the YouTube logo. Include abstract link nodes, transcript lines, highlighted tools and collection folders. High-contrast editorial design, dark ink and off-white background with one electric accent, precise technical mood, no people, no stock illustration, no copied platform logos."
+    }
+  },
+  {
+    id: "whatsorga",
+    number: "05",
     title: "WhatsOrga",
     category: "Semantic WhatsApp Organization - Memory System",
     status: "Dashboard / Analysis System",
@@ -216,7 +278,7 @@ export const projects: Project[] = [
   },
   {
     id: "coupletime",
-    number: "05",
+    number: "06",
     title: "CoupleTime",
     category: "Relationship Ritual Tool - Structured Dialogue",
     status: "Web App / AI Integration WIP",
@@ -269,7 +331,7 @@ export const projects: Project[] = [
   },
   {
     id: "augmented-ops",
-    number: "06",
+    number: "07",
     title: "Augmented_Ops.INC",
     category: "Autonomous Service Agency Mesh - Holding System",
     status: "Agency Ecosystem / Multi-Repo System",
